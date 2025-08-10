@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VideoFinder — Simple</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>VideoFinder</h1>
+      <p class="muted">Paste a YouTube Data API key and search for channels</p>
+    </header>
+
+    <section class="controls card">
+      <label>API Key</label>
+      <input id="apiKey" placeholder="Paste any YouTube Data API v3 key here">
+      <label>Search keyword</label>
+      <input id="keyword" placeholder="e.g. camping recipes">
+      <div class="row">
+        <button id="searchBtn" class="btn">Search</button>
+        <button id="clearBtn" class="btn alt">Clear Results</button>
+        <button id="exportBtn" class="btn alt">Export CSV</button>
+      </div>
+      <div class="small">History is saved locally in your browser.</div>
+    </section>
+
+    <section class="history card">
+      <h2>Search History</h2>
+      <div id="historyList" class="history-list">No history yet.</div>
+      <div class="row">
+        <button id="clearHistory" class="btn alt">Clear History</button>
+      </div>
+    </section>
+
+    <section class="results card">
+      <h2>Results (<span id="count">0</span>)</h2>
+      <table id="resultsTable">
+        <thead><tr><th>Channel</th><th>Subs</th><th>Videos</th><th>Last Upload</th><th>Actions</th></tr></thead>
+        <tbody id="resultsBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
