@@ -7,28 +7,11 @@
 </head>
 <body>
     <h1>Video Finder</h1>
-
-    <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Enter keyword">
-        <input type="text" id="apiKeyInput" placeholder="Enter YouTube API Key">
-        <button onclick="searchVideos()">Search</button>
-        <button onclick="downloadCSV(resultsData)">Download CSV</button>
-    </div>
-
-    <table id="resultsTable">
-        <thead>
-            <tr>
-                <th>Video URL</th>
-                <th>Channel ID</th>
-                <th>Title</th>
-                <th>Subscribers</th>
-                <th>Videos</th>
-                <th>Last Upload</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-
+    <input type="text" id="apiKeyInput" placeholder="Enter YouTube API Key"><br><br>
+    <input type="text" id="searchInput" placeholder="Search videos...">
+    <button onclick="searchVideos()">Search</button>
+    <button onclick="downloadCSV()">Download CSV</button>
+    <div id="results"></div>
     <script src="script.js"></script>
 </body>
 </html>
