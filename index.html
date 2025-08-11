@@ -7,15 +7,28 @@
 </head>
 <body>
     <h1>Video Finder</h1>
-    <button onclick="downloadCSV(sampleData)">Download CSV</button>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Enter keyword">
+        <input type="text" id="apiKeyInput" placeholder="Enter YouTube API Key">
+        <button onclick="searchVideos()">Search</button>
+        <button onclick="downloadCSV(resultsData)">Download CSV</button>
+    </div>
+
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Video URL</th>
+                <th>Channel ID</th>
+                <th>Title</th>
+                <th>Subscribers</th>
+                <th>Videos</th>
+                <th>Last Upload</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 
     <script src="script.js"></script>
-    <script>
-        // Example data for testing
-        const sampleData = [
-            { videoId: "abc123", channelId: "chan1", title: "Video One", subs: 1000, videos: 10, lastUpload: "2025-08-09" },
-            { videoId: "def456", channelId: "chan2", title: "Video Two", subs: 2000, videos: 20, lastUpload: "2025-08-08" }
-        ];
-    </script>
 </body>
 </html>
